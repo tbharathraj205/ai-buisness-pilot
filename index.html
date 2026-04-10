@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Business Autopilot</title>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/css/global.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="topbar">
+    <div class="logo">
+      <div class="logo-dot"></div>
+      AI Business Autopilot
+    </div>
+
+    <div class="nav-links">
+      <span class="nav-link active" onclick="navigate('dashboard')">Dashboard</span>
+      <span class="nav-link" onclick="navigate('conversations')">Conversations</span>
+      <span class="nav-link" onclick="navigate('appointments')">Appointments</span>
+      <span class="nav-link" onclick="navigate('orders')">Orders</span>
+      <div class="nav-link" onclick="navigate('inventory')">Inventory</div>
+    </div>
+
+    <div class="conn-pill">
+      <div class="conn-dot"></div>
+      WhatsApp connected
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Page Content -->
+  <div id="page-container"></div>
+
+  <!-- Scripts -->
+  <script src="config/config.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

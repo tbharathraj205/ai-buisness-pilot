@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Setup - AI Business Autopilot</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+<link rel="stylesheet" href="../assets/css/setup.css" />
+</head>
+
+<body class="login-body">
+
+  <div class="setup-card">
+
+    <!-- STEP HEADER -->
+    <div class="step-header">
+      <div class="step active">Basics</div>
+      <div class="line"></div>
+      <div class="step">Hours & services</div>
+      <div class="line"></div>
+      <div class="step">FAQs</div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div id="step1" class="step-content">
+      <h3>Business Basics</h3>
+
+      <input id="email" placeholder="Email" />
+      <input id="password" type="password" placeholder="Password" />
+      <input id="businessName" placeholder="Business Name" />
+      <input id="category" placeholder="Type (product/service/hybrid)" />
+      <input id="phone" placeholder="Phone" />
+      <input id="city" placeholder="City" />
+
+      <div class="btn-row">
+        <button class="primary" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div id="step2" class="step-content" style="display:none;">
+      <h3>Hours & Services</h3>
+
+      <input id="hours" placeholder="Working hours (e.g. 9am-7pm)" />
+      <input id="services" placeholder="Services / Products" />
+
+      <div class="btn-row">
+        <button class="secondary" onclick="prevStep()">Back</button>
+        <button class="primary" onclick="nextStep()">Next</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div id="step3" class="step-content" style="display:none;">
+      <h3>Add your FAQs</h3>
+
+      <div id="faqContainer">
+        <div class="faq-item">
+          <input class="faq-q" placeholder="Question" />
+          <input class="faq-a" placeholder="Answer" />
+        </div>
+      </div>
+
+      <button class="add-btn" onclick="addFAQ()">+ Add another FAQ</button>
+
+      <div class="btn-row">
+        <button class="secondary" onclick="prevStep()">Back</button>
+        <button class="primary" onclick="finishSetup()">Finish setup</button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../config/config.js"></script>
+  <script src="../scripts/setup.js"></script>
+
+</body>
+</html>
