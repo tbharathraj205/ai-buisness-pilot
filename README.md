@@ -50,39 +50,66 @@ Local businesses often lose potential customers due to missed calls, delayed rep
 ## 📂 Project Structure
 
 ```
-ai-business-autopilot/
+Business Autopilot/
 │
-├── client/                              # Frontend — chat widget and business dashboard
-│   ├── dashboard/
-│   │   ├── index.html                   # Dashboard overview — leads, conversations, stats
-│   │   ├── leads.html                   # Lead table with status filters
-│   │   ├── conversations.html           # WhatsApp-style conversation monitor
-│   │   └── setup.html                   # 3-step onboarding wizard
-│   └── widget/
-│       ├── index.html                   # Customer-facing WhatsApp-style chat interface
-│       ├── chat.js                      # Message rendering and send/receive logic
-│       └── chat.css                     # Chat UI styling
+├── index.html                          # Application entry point
 │
-├── server/                              # Node.js backend
-│   ├── index.js                         # Express app entry point and route registration
-│   ├── routes/
-│   │   ├── chat.js                      # Receives customer messages, triggers AI response
-│   │   ├── business.js                  # Business config CRUD (type, hours, FAQs, services)
-│   │   ├── leads.js                     # Lead creation and status update endpoints
-│   │   ├── orders.js                    # Order creation and listing
-│   │   ├── appointments.js              # Slot availability, booking, and cancellation
-│   │   └── inventory.js                 # Inventory read and deduction endpoints
-│   ├── services/
-│   │   ├── aiAgent.js                   # OpenAI call with dynamic system prompt + conversation history
-│   │   ├── ragSearch.js                 # Pinecone semantic search for FAQ retrieval
-│   │   ├── leadExtractor.js             # Extracts name and phone from conversation text
-│   │   ├── slotManager.js               # Queries and reserves appointment slots in Supabase
-│   │   └── inventoryUpdater.js          # Deducts stock from Supabase on order confirmation
-│   └── db/
-│       └── supabaseClient.js            # Supabase client initialization and shared query helpers
+├── README.md                           # Project documentation
 │
-├── .env.example                         # Required environment variables template
-└── README.md
+├── /assets
+│   ├── /css
+│   │   ├── conversations.css
+│   │   ├── dashboard.css
+│   │   ├── global.css
+│   │   ├── leads.css
+│   │   └── setup.css
+│   │
+│   ├── /js
+│   │   ├── api.js                      # API communication layer
+│   │   ├── main.js                     # App initialization & routing
+│   │   ├── state.js                    # Global state management
+│   │   └── utils.js                    # Helper functions
+│   │
+│   ├── /images                         # Icons, avatars, logos
+│   │
+│   └── /fonts                          # Custom fonts (optional)
+│
+├── /components                         # Reusable UI components
+│   ├── chat-item.html
+│   ├── faq-item.html
+│   ├── lead-item.html
+│   ├── message-bubble.html
+│   ├── navbar.html
+│   ├── sidebar.html
+│   └── stat-card.html
+│
+├── /pages                              # Main application pages
+│   ├── appointments.html
+│   ├── conversations.html
+│   ├── dashboard.html
+│   ├── inventory.html
+│   ├── leads.html
+│   ├── login.html
+│   ├── orders.html
+│   └── setup.html
+│
+├── /scripts                            # Page-specific JavaScript logic
+│   ├── appointments.js
+│   ├── conversations.js
+│   ├── dashboard.js
+│   ├── inventory.js
+│   ├── leads.js
+│   ├── login.js
+│   ├── orders.js
+│   └── setup.js
+│
+├── /data                               # Mock/demo data
+│   ├── chats.json
+│   ├── faq.json
+│   └── leads.json
+│
+└── /config                             # Configuration files
+    └── config.js                       # API URLs & environment config
 ```
 
 ---
