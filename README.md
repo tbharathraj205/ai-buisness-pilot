@@ -251,5 +251,7 @@ Contributions are welcome.
 ## 🧩 Author
 
 **Bharath Raj T**
+
 📧 mltbharathraj2005@gmail.com
+
 🔗 [GitHub](https://github.com/tbharathraj205)
